@@ -9,43 +9,61 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var btnStatus = btnStatusList.goGame
+    
     @IBOutlet weak var imageViewComputer: UIImageView!
     
+    @IBAction func startAndReStartBtn(_ sender: Any) {
+        
+        if self.btnStatus == .goRetry {
+            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.randImage), userInfo: nil, repeats: true)
+            
+            
+            
+            self.btnStatus = .goGame
+            self.startAndReStartBtn.setTitle("Stop", for: .normal)
+        }else{
+            
+            timer.invalidate()
+            
+            
+            if (self.userRandNum - self.comRandNum) == 1 || (self.userRandNum - self.comRandNum) == -2{
+                
+                
+                print("user won")
+                resultLabel.text = "user won"
+            }else if (self.userRandNum == self.comRandNum){
+                
+                resultLabel.text = "equal"
+                print("equal")
+                
+            }else{
+                resultLabel.text = "Computer Won"
+                print("Computer Won")
+            }
+            
+            self.btnStatus = .goRetry
+            self.startAndReStartBtn.setTitle("Start", for: .normal)
+            
+        }
+    }
+    @IBOutlet weak var startAndReStartBtn: UIButton!
     @IBOutlet weak var imageViewPlayer: UIImageView!
     
     @IBOutlet weak var resultLabel: UILabel!
-    @IBAction func reStartBtn(_ sender: Any) {
-        
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.randImage), userInfo: nil, repeats: true)
-        
-    }
+
     var gameFlag = false
     var timer:Timer!
-    @IBAction func stopBtn(_ sender: Any) {
 
-        
-        timer.invalidate()
-        
-        
-        if (self.userRandNum - self.comRandNum) == 1 || (self.userRandNum - self.comRandNum) == -2{
-            
-            
-            print("user won")
-            resultLabel.text = "user won"
-        }else if (self.userRandNum == self.comRandNum){
-            
-            resultLabel.text = "equal"
-            print("equal")
-            
-        }else{
-            resultLabel.text = "Computer Won"
-            print("Computer Won")
-        }
-        
-        
-        
+    
+    
+    enum btnStatusList {
+        case goRetry
+        case goGame
         
     }
+
     
     var comRandNum = Int()
     var userRandNum = Int()
@@ -63,26 +81,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imageViewComputer.image = UIImage(named:imageList[ counter % 3 ])
-//        imageViewPlayer.image = UIImage(named:imageList[ (counter+1) % 3 ])
-//        counter += 1
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.randImage), userInfo: nil, repeats: true)
-//        DispatchQueue.global().async {
-//
-//
-//                DispatchQueue.main.async {
-//                    self.imageViewComputer.image = UIImage(named:self.imageList[ self.counter % 3 ])
-//                }
-//
-//                //            print(imageList[ counter % 3 ]);
-//                //            imageViewPlayer.image = UIImage(named:imageList[ (counter+1) % 3 ])
-//
-//                self.counter += 1
-//                print(self.counter)
-//                sleep(1)
-//
-//        }
+        self.startAndReStartBtn.setTitle("Stop", for: .normal)
+        resultLabel.text = "Result"
+
 
 
         // Do any additional setup after loading the view, typically from a nib.
