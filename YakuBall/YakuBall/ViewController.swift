@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageViewPlayer: UIImageView!
     
+    @IBOutlet weak var resultLabel: UILabel!
     @IBAction func reStartBtn(_ sender: Any) {
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.randImage), userInfo: nil, repeats: true)
@@ -28,13 +29,16 @@ class ViewController: UIViewController {
         
         if (self.userRandNum - self.comRandNum) == 1 || (self.userRandNum - self.comRandNum) == -2{
             
+            
             print("user won")
+            resultLabel.text = "user won"
         }else if (self.userRandNum == self.comRandNum){
             
+            resultLabel.text = "equal"
             print("equal")
             
         }else{
-            
+            resultLabel.text = "Computer Won"
             print("Computer Won")
         }
         

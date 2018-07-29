@@ -42,6 +42,13 @@
                                     <action selector="reStartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8o-mz-AXy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV7-rW-h6T">
+                                <rect key="frame" x="74" y="505" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,6 +56,7 @@
                     <connections>
                         <outlet property="imageViewComputer" destination="Ge7-Un-1cH" id="dWG-29-iAa"/>
                         <outlet property="imageViewPlayer" destination="9Cf-Qg-i9v" id="c4q-bI-OLj"/>
+                        <outlet property="resultLabel" destination="DV7-rW-h6T" id="fvI-Gl-OM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
