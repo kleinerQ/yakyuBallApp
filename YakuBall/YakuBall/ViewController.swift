@@ -10,8 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var btnStatus = btnStatusList.goGame
+    var imageNameList = [UIImageView]()
+    var counter = 0
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image6: UIImageView!
     
+    @IBOutlet weak var image8: UIImageView!
+    @IBOutlet weak var image9: UIImageView!
+    @IBOutlet weak var image7: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image1: UIImageView!
+    var btnStatus = btnStatusList.goGame
+    let alphaStep:CGFloat = 0.1
+    var alphaValueCurrent:CGFloat =  0
     @IBOutlet weak var imageViewComputer: UIImageView!
     
     @IBAction func startAndReStartBtn(_ sender: Any) {
@@ -30,9 +43,35 @@ class ViewController: UIViewController {
             
             if (self.userRandNum - self.comRandNum) == 1 || (self.userRandNum - self.comRandNum) == -2{
                 
-                
+                alphaValueCurrent += alphaStep
                 print("user won")
                 resultLabel.text = "user won"
+                //image1.alpha += alphaStep
+                if counter == 9 {
+                    counter = 0
+                    alphaValueCurrent = 0
+                    
+                    for image in imageNameList{
+                        image.alpha = 0
+                        
+                    }
+                }
+                for imageIndex in 0 ... counter {
+                    imageNameList[imageIndex].alpha = alphaValueCurrent
+                    
+                }
+                imageViewComputer.alpha = 1 - alphaValueCurrent
+                imageViewPlayer.alpha = 1 - alphaValueCurrent
+                imageNameList[counter].isHidden = false
+                counter += 1
+                if counter == 9 {
+                    for image in imageNameList{
+                        image.alpha = 1
+                    }
+                    imageViewComputer.alpha = 0
+                    imageViewPlayer.alpha = 0
+                }
+                
             }else if (self.userRandNum == self.comRandNum){
                 
                 resultLabel.text = "equal"
@@ -86,8 +125,15 @@ class ViewController: UIViewController {
         self.startAndReStartBtn.setTitle("Stop", for: .normal)
         resultLabel.text = "Result"
 
+        imageNameList = [image1,image2,image3,image4,image5,image6,image7,image8,image9]
 
+        for image in imageNameList{
+            image.alpha = 0
 
+        }
+//        image1.alpha = 0
+//        image2.alpha = 0
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

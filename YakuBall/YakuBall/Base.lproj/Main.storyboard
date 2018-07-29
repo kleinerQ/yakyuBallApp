@@ -18,6 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-pK-VwE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-Ij-PKw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -0-0" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-gK-aNp">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -0-1" translatesAutoresizingMaskIntoConstraints="NO" id="lYi-Mq-LIv">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -0-2" translatesAutoresizingMaskIntoConstraints="NO" id="Z4G-0i-QHX">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LRg-aF-zxG">
+                                        <rect key="frame" x="0.0" y="215.5" width="375" height="216"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -1-0" translatesAutoresizingMaskIntoConstraints="NO" id="cev-V6-VbN">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="216"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -1-1" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-rF-ic1">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="216"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -1-2" translatesAutoresizingMaskIntoConstraints="NO" id="a3y-SA-Wg2">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="216"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hbc-yJ-S9P">
+                                        <rect key="frame" x="0.0" y="431.5" width="375" height="215.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -2-0" translatesAutoresizingMaskIntoConstraints="NO" id="zdg-vx-cww">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -2-1" translatesAutoresizingMaskIntoConstraints="NO" id="cwY-9m-2g4">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc612de728c6aa1be42cbee1e9d2cbcd -2-2" translatesAutoresizingMaskIntoConstraints="NO" id="6cI-7o-eJF">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="215.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge7-Un-1cH">
                                 <rect key="frame" x="67" y="108" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,14 +74,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV7-rW-h6T">
-                                <rect key="frame" x="74" y="505" width="233" height="21"/>
+                                <rect key="frame" x="67" y="600" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1V-2t-2AM">
-                                <rect key="frame" x="74" y="290" width="46" height="30"/>
+                                <rect key="frame" x="67" y="566" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -43,9 +90,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bQ0-pK-VwE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IJL-qc-9iS"/>
+                            <constraint firstItem="bQ0-pK-VwE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JZC-tH-Y7w"/>
+                            <constraint firstItem="bQ0-pK-VwE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bce-x1-xHS"/>
+                            <constraint firstItem="bQ0-pK-VwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uDT-xH-EEe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="image1" destination="4Ai-gK-aNp" id="K8c-Bc-NcJ"/>
+                        <outlet property="image2" destination="lYi-Mq-LIv" id="uSA-by-Hzr"/>
+                        <outlet property="image3" destination="Z4G-0i-QHX" id="d1k-1w-OMd"/>
+                        <outlet property="image4" destination="cev-V6-VbN" id="fCG-vI-JU2"/>
+                        <outlet property="image5" destination="hU1-rF-ic1" id="Izk-0d-4ME"/>
+                        <outlet property="image6" destination="a3y-SA-Wg2" id="NyC-nV-J6W"/>
+                        <outlet property="image7" destination="zdg-vx-cww" id="RgM-Q2-OGe"/>
+                        <outlet property="image8" destination="cwY-9m-2g4" id="R0V-zx-A2I"/>
+                        <outlet property="image9" destination="6cI-7o-eJF" id="yIx-H7-Yq1"/>
                         <outlet property="imageViewComputer" destination="Ge7-Un-1cH" id="dWG-29-iAa"/>
                         <outlet property="imageViewPlayer" destination="9Cf-Qg-i9v" id="c4q-bI-OLj"/>
                         <outlet property="resultLabel" destination="DV7-rW-h6T" id="fvI-Gl-OM4"/>
@@ -57,4 +119,15 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -0-0" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -0-1" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -0-2" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -1-0" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -1-1" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -1-2" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -2-0" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -2-1" width="250" height="379"/>
+        <image name="cc612de728c6aa1be42cbee1e9d2cbcd -2-2" width="250" height="379"/>
+    </resources>
 </document>
